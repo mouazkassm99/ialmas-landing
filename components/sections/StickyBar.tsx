@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { navLinks, siteConfig } from "@/content";
+import { siteConfig } from "@/content";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function StickyBar() {
   const [scrolled, setScrolled] = useState(false);
+  const { lang, content, toggleLang } = useLanguage();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60);
@@ -23,7 +25,7 @@ export default function StickyBar() {
             : "bg-transparent"
         }`}
       >
-        <a href="#hero" className="flex items-center gap-2 flex-shrink-0">
+        <a href="#hero" className="flex items-center gap-2 shrink-0">
           <Image
             src="/logos/ialmas-logo.png"
             alt={siteConfig.name}
@@ -33,23 +35,36 @@ export default function StickyBar() {
             unoptimized
           />
         </a>
+
         <nav className="flex items-center gap-6">
-          {navLinks.map((link) => (
+          {content.navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-muted text-sm hover:text-foreground transition-colors duration-150"
+              className="text-muted text-base hover:text-foreground transition-colors duration-150"
             >
               {link.label}
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="bg-primary text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-150 shadow-md shadow-primary/20"
-        >
-          Contact Us
-        </a>
+
+        <div className="flex items-center gap-3">
+          {/* Language toggle */}
+          <button
+            onClick={toggleLang}
+            className="text-muted text-xs font-semibold border border-border rounded-md px-3 py-1.5 hover:border-primary/50 hover:text-foreground transition-colors duration-150"
+            aria-label="Toggle language"
+          >
+            {lang === "ar" ? "EN" : "عربي"}
+          </button>
+
+          <a
+            href="#contact"
+            className="bg-primary text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-150 shadow-md shadow-primary/20"
+          >
+            {content.sticky.contactUs}
+          </a>
+        </div>
       </header>
 
       {/* Mobile sticky bottom bar */}
@@ -59,14 +74,21 @@ export default function StickyBar() {
             href="#contact"
             className="flex-1 bg-primary text-white text-sm font-semibold py-3 rounded-xl text-center hover:bg-primary-hover transition-colors duration-150"
           >
-            Contact Us
+            {content.sticky.contactUs}
           </a>
           <a
             href="#vendors"
             className="flex-1 border border-border text-foreground text-sm font-semibold py-3 rounded-xl text-center hover:border-primary/60 hover:text-primary transition-colors duration-150"
           >
-            View Partners
+            {content.sticky.viewPartners}
           </a>
+          <button
+            onClick={toggleLang}
+            className="border border-border text-muted text-xs font-semibold px-4 rounded-xl hover:border-primary/50 hover:text-foreground transition-colors duration-150"
+            aria-label="Toggle language"
+          >
+            {lang === "ar" ? "EN" : "عربي"}
+          </button>
         </div>
       </div>
     </>

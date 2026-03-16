@@ -1,20 +1,41 @@
+"use client";
+
 import Image from "next/image";
 import CtaButton from "@/components/ui/CtaButton";
-import { heroContent, siteConfig } from "@/content";
+import { siteConfig } from "@/content";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Hero() {
+  const { content } = useLanguage();
+  const { hero } = content;
+
   return (
     <section
       id="hero"
-      className="hero-bg min-h-[100svh] flex flex-col items-center justify-center px-4 pt-20 pb-32 md:pt-24 md:pb-24 text-center relative overflow-hidden"
+      className="hero-bg min-h-svh flex flex-col items-center justify-center px-4 pt-20 pb-32 md:pt-24 md:pb-24 text-center relative overflow-hidden"
     >
-      {/* Decorative grid lines */}
+      {/* Grid overlay */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        className="absolute inset-0 pointer-events-none opacity-[0.025]"
         style={{
           backgroundImage:
             "linear-gradient(to right, #E9EDF3 1px, transparent 1px), linear-gradient(to bottom, #E9EDF3 1px, transparent 1px)",
           backgroundSize: "60px 60px",
+        }}
+      />
+
+      {/* Animated concentric rings */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="hero-ring hero-ring-1" />
+        <div className="hero-ring hero-ring-2" />
+        <div className="hero-ring hero-ring-3" />
+      </div>
+
+      {/* Red accent corner glow */}
+      <div
+        className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none opacity-[0.07]"
+        style={{
+          background: "radial-gradient(circle at top right, #EB1E2A, transparent 70%)",
         }}
       />
 
@@ -33,31 +54,31 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight tracking-tight">
-          {heroContent.headline}
+        <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight tracking-tight">
+          {hero.headline}
         </h1>
 
         {/* Subheadline */}
-        <p className="text-muted text-base md:text-lg max-w-xl leading-relaxed">
-          {heroContent.subheadline}
+        <p className="text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
+          {hero.subheadline}
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 mt-2 w-full sm:w-auto justify-center">
-          <CtaButton href={heroContent.primaryCta.href} variant="primary" size="lg">
-            {heroContent.primaryCta.label}
+          <CtaButton href="#contact" variant="primary" size="lg" className="btn-shimmer">
+            {hero.primaryCta}
           </CtaButton>
-          <CtaButton href={heroContent.secondaryCta.href} variant="secondary" size="lg">
-            {heroContent.secondaryCta.label}
+          <CtaButton href="#vendors" variant="secondary" size="lg">
+            {hero.secondaryCta}
           </CtaButton>
         </div>
 
         {/* Trust chips */}
         <div className="flex flex-wrap justify-center gap-2 mt-2">
-          {heroContent.trustChips.map((chip) => (
+          {hero.trustChips.map((chip) => (
             <span
               key={chip}
-              className="text-xs text-muted border border-border rounded-full px-3 py-1 bg-surface/60"
+              className="text-xs text-muted border border-border rounded-full px-3 py-1 bg-surface/60 hover:border-primary/40 hover:text-foreground transition-colors duration-150"
             >
               {chip}
             </span>
