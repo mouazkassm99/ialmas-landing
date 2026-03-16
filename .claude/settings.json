@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//private/tmp/**)",
+      "Bash(npx create-next-app@latest ialmas-landing --typescript --tailwind --app --src-dir=false --import-alias=\"@/*\" --no-eslint --yes)",
+      "Bash(cp /tmp/ialmas-landing/.gitignore /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp /tmp/ialmas-landing/next-env.d.ts /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp /tmp/ialmas-landing/next.config.ts /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp /tmp/ialmas-landing/package.json /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp /tmp/ialmas-landing/package-lock.json /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp /tmp/ialmas-landing/postcss.config.mjs /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp /tmp/ialmas-landing/tsconfig.json /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp -r /tmp/ialmas-landing/node_modules /Users/mouaz/Documents/work/private/huda/contact-us/)",
+      "Bash(cp -r /tmp/ialmas-landing/public /Users/mouaz/Documents/work/private/huda/contact-us/)"
+    ],
+    "additionalDirectories": [
+      "/Users/mouaz/Documents/work/private/huda/contact-us/docs/logos"
+    ]
+  }
+}

@@ -1,0 +1,281 @@
+Build a one-page, mobile-first promotional landing page for iAlmas, intended for QR-code traffic at exhibitions and trade shows. The page must look premium, load fast, and convert quickly on mobile. The goal is to attract business visitors, establish credibility in seconds, showcase trusted vendors, and drive direct contact.
+
+Do not build a generic corporate homepage. Build a focused exhibition landing page optimized for users who scan a QR code and decide quickly whether to engage.
+
+Project intent:
+- One-page landing page only
+- Promotional and trust-building
+- Mobile-first, but polished on desktop too
+- Enterprise cybersecurity visual language
+- Arabic-ready structure
+- High-conversion CTA placement
+- Premium, clean, dark UI based on the following design system
+
+DESIGN SYSTEM
+
+Colors:
+- Primary: #EB1E2A
+- Background: #0E1116
+- Surface: #151A22
+- Surface Alt: #1B2230
+- Text: #E9EDF3
+- Text Muted: #A8B2C3
+- Border: #2A3445
+
+Typography:
+- Font family: Inter, Segoe UI, Arial, sans-serif
+- Headings: bold, confident, compact
+- Body: concise, readable, high contrast
+- Keep typography elegant and professional, suitable for enterprise cybersecurity
+
+UI direction:
+- Dark premium theme
+- Cinematic but restrained
+- Sleek enterprise security aesthetic
+- Clean spacing
+- Slight glassmorphism or layered panel feel is acceptable if tasteful
+- Subtle animation only
+- No noisy effects
+- No generic template feel
+
+Visitor context:
+The visitor is likely scanning the QR code while standing at an exhibition booth. They are on a phone, distracted, and need to understand the company quickly. The landing page must communicate:
+1. who iAlmas is
+2. what iAlmas offers
+3. which vendors iAlmas works with
+4. how to contact the team immediately
+
+Core UX requirements:
+- Mobile-first
+- Hero must explain the company immediately
+- CTA visible early
+- Partner/vendor showcase must be visually strong
+- Contact section must be frictionless
+- Footer must include useful links
+- Keep copy short, promotional, and credible
+- No filler sections
+
+CONTENT TO USE
+
+Brand:
+- Company name: iAlmas
+
+Company description and positioning:
+Use the following content to write polished, concise promotional copy for the landing page. Improve wording for clarity and exhibition suitability, but do not change meaning.
+
+Base positioning:
+- iAlmas is a value-added distributor and cybersecurity-focused solutions provider
+- The company supports secure digital transformation through trusted cybersecurity technologies
+- The company works with leading security vendors and helps organizations adopt security solutions across multiple domains
+- The tone should be enterprise-grade, credible, and promotional without sounding exaggerated
+
+Approved message themes:
+- Secure Digital Transformation
+- Trusted Cybersecurity Solutions
+- Value-Added Distribution
+- Enterprise Security Expertise
+- Regional Business Support
+- Partner Ecosystem
+- Security Solutions Tailored for Modern Organizations
+
+Use short landing-page copy derived from these ideas, such as:
+- Secure Digital Transformation with Trusted Cybersecurity Solutions
+- Your Value-Added Cybersecurity Distribution Partner
+- Connect with proven security technologies through one trusted team
+- Explore leading cybersecurity solutions backed by strong vendor partnerships
+
+Solutions/capabilities:
+Create concise cards or blocks for solution areas based on the extracted material and vendor alignment. Use wording like:
+- Endpoint Protection
+- Data Security
+- Mobile Security
+- Secure Access
+- Threat Detection and Response
+- Enterprise Cybersecurity Distribution
+
+Vendor / partner information:
+Create a vendor showcase section using these vendors:
+- Xcitium
+- Zecurion
+- Blinkly
+- SyncDog
+- Protelion
+- Viettel Cyber Security
+
+Each vendor must appear with:
+- logo placeholder or image slot component
+- company name
+- short one-line description
+
+Use these short vendor summaries:
+- Xcitium — Endpoint protection and zero-trust security solutions
+- Zecurion — Data security and data loss prevention solutions
+- Blinkly — Security-focused digital solutions and monitoring-oriented tooling
+- SyncDog — Mobile security and secure enterprise workspace technology
+- Protelion — Secure network access and enterprise-grade connectivity protection
+- Viettel Cyber Security — Threat detection, EDR, and cybersecurity services
+
+If an actual logo asset is not available, create a clean visual placeholder tile with the vendor name that is easy to replace later.
+
+Contact section:
+Create a Contact Us section with:
+- Full Name
+- Company Name
+- Email
+- Phone / WhatsApp
+- Interest / Solution Needed
+- Message
+- Submit button
+
+Also display direct contact methods in the contact area using structured placeholders for:
+- email
+- phone
+- website
+- LinkedIn or social link
+These should be easy to update from a config object or constants file.
+
+Footer requirements:
+Footer must contain:
+- iAlmas logo area
+- short company description
+- quick links
+- links to vendor section and contact section
+- website link
+- email link
+- copyright text
+- layout that can support Arabic later
+
+PAGE STRUCTURE
+
+Build the page in this order:
+
+1. Sticky CTA behavior
+- On mobile, show a sticky bottom CTA bar with:
+  - Contact Us
+  - View Partners
+- On desktop, use a sticky lightweight top CTA cluster or anchored header CTA
+- Must be elegant and not intrusive
+
+2. Hero section
+Include:
+- iAlmas logo
+- strong headline
+- short subheadline
+- primary CTA: Contact Us
+- secondary CTA: Explore Partners
+- a premium dark background treatment
+- optional trust chips or small badges below CTAs
+
+Hero copy should feel promotional and exhibition-ready.
+Suggested direction:
+Headline:
+Secure Digital Transformation with Trusted Cybersecurity Solutions
+Subheadline:
+iAlmas helps organizations discover and adopt proven cybersecurity technologies through a trusted vendor ecosystem and value-added expertise.
+
+3. Company snapshot / trust section
+Create 3 to 4 cards that explain:
+- Who iAlmas is
+- What iAlmas provides
+- Why businesses work with iAlmas
+Suggested card themes:
+- Cybersecurity Solutions
+- Trusted Vendor Ecosystem
+- Enterprise-Ready Expertise
+- Regional Support
+
+4. Solutions section
+Create a polished responsive grid for solution areas.
+Each item must include:
+- icon
+- title
+- one-sentence description
+Use the capabilities listed above.
+
+5. Vendors / partners section
+This is a major section.
+Make it visually impressive and highly scannable.
+Requirements:
+- strong heading
+- responsive logo/name grid
+- each vendor in a clean card/tile
+- consistent alignment
+- subtle hover effects
+- mobile-friendly wrapping
+- short descriptor line under each vendor name
+
+6. Why contact us section
+Create a small persuasive block answering why a visitor should engage now.
+Use 3 concise points:
+- Discover the right cybersecurity stack for your organization
+- Connect with trusted vendors through one experienced partner
+- Start the conversation quickly with the iAlmas team
+
+7. Contact Us section
+Include the form and direct contact methods.
+Make this section premium, centered, and conversion-focused.
+Validation should feel modern and clean.
+
+8. Footer
+Compact, useful, professional, link-rich but not crowded.
+
+CONTENT STYLE RULES
+
+- Write concise promotional copy
+- Do not use long paragraphs
+- Avoid hype and vague startup language
+- Keep the tone serious, polished, and enterprise-focused
+- Make the page suitable for cybersecurity buyers and exhibition visitors
+- Use real labels and real vendor names
+- Do not invent awards, metrics, or claims
+- Do not add fake testimonials
+- Do not add blog, pricing, login, careers, or unrelated pages
+
+RESPONSIVENESS
+
+- Mobile first
+- Optimized for QR traffic on phones
+- Thumb-friendly buttons
+- Strong spacing and readability on small screens
+- Vendor tiles must stack or wrap elegantly
+- Hero must remain strong without requiring excessive scrolling
+- Contact section must remain accessible and easy to fill
+
+ARABIC-READY REQUIREMENTS
+
+Prepare the implementation so Arabic can be added later without major refactor:
+- centralize text in content objects/constants
+- avoid layout assumptions that break with longer text
+- structure components to support RTL later
+- use typography and spacing that can tolerate bilingual content
+- do not implement full RTL now unless needed, but keep the architecture ready
+
+TECHNICAL EXPECTATIONS
+
+- Build clean, maintainable components
+- Prefer a componentized structure
+- Keep content easy to edit
+- Use a data-driven approach for vendors, solutions, links, and CTA items
+- Preserve performance
+- Avoid unnecessary libraries
+- Use tasteful animation only
+- Use accessible semantic HTML
+- Include section IDs for anchor links
+
+OUTPUT EXPECTATION
+
+Generate the landing page implementation with:
+- layout
+- promotional text
+- vendor info section
+- contact form
+- footer with links
+
+Also do the following:
+1. create a central content/config object for all editable text, vendor data, links, and contact data
+2. create reusable components for section wrapper, CTA button, vendor card, solution card, and footer link group
+3. ensure the page looks custom-designed, not template-generated
+4. use the design system exactly as given
+5. keep the page polished enough for exhibition use
+
+If using placeholder assets, clearly separate them so they can be replaced later with real logos and company assets.
