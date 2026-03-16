@@ -2,6 +2,7 @@
 
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import SolutionCard from "@/components/ui/SolutionCard";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Solutions() {
@@ -11,7 +12,7 @@ export default function Solutions() {
   return (
     <>
       <div className="section-divider" />
-      <SectionWrapper id="solutions" className="bg-background relative overflow-hidden">
+      <SectionWrapper id="solutions" className="bg-background relative overflow-hidden hex-grid">
         {/* Faint large watermark */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
           <svg
@@ -27,7 +28,7 @@ export default function Solutions() {
           </svg>
         </div>
 
-        <div className="relative text-center mb-14">
+        <ScrollReveal className="relative text-center mb-14">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
             {solutionsSection.label}
           </p>
@@ -37,16 +38,17 @@ export default function Solutions() {
           <p className="text-muted mt-7 max-w-2xl mx-auto text-base leading-relaxed">
             {solutionsSection.description}
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {solutionsSection.items.map((solution) => (
-            <SolutionCard
-              key={solution.title}
-              icon={solution.icon}
-              title={solution.title}
-              description={solution.description}
-            />
+          {solutionsSection.items.map((solution, i) => (
+            <ScrollReveal key={solution.title} delay={i * 70} from="up">
+              <SolutionCard
+                icon={solution.icon}
+                title={solution.title}
+                description={solution.description}
+              />
+            </ScrollReveal>
           ))}
         </div>
       </SectionWrapper>

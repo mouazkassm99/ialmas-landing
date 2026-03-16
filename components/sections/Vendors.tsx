@@ -2,6 +2,7 @@
 
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import VendorCard from "@/components/ui/VendorCard";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Vendors() {
@@ -19,8 +20,14 @@ export default function Vendors() {
             background: "radial-gradient(ellipse at top left, rgba(235,30,42,0.07), transparent 70%)",
           }}
         />
+        <div
+          className="absolute bottom-0 right-0 w-[400px] h-[300px] pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse at bottom right, rgba(235,30,42,0.05), transparent 70%)",
+          }}
+        />
 
-        <div className="relative text-center mb-14">
+        <ScrollReveal className="relative text-center mb-14">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
             {vendorsSection.label}
           </p>
@@ -30,17 +37,18 @@ export default function Vendors() {
           <p className="text-muted mt-7 max-w-2xl mx-auto text-base leading-relaxed">
             {vendorsSection.description}
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="relative grid grid-cols-2 md:grid-cols-3 gap-5">
-          {vendorsSection.items.map((vendor) => (
-            <VendorCard
-              key={vendor.name}
-              name={vendor.name}
-              logo={vendor.logo}
-              url={vendor.url}
-              description={vendor.description}
-            />
+          {vendorsSection.items.map((vendor, i) => (
+            <ScrollReveal key={vendor.name} delay={i * 60} from="scale">
+              <VendorCard
+                name={vendor.name}
+                logo={vendor.logo}
+                url={vendor.url}
+                description={vendor.description}
+              />
+            </ScrollReveal>
           ))}
         </div>
       </SectionWrapper>

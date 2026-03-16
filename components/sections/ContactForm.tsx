@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { getIcon } from "@/components/ui/Icons";
 import { siteConfig } from "@/content";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -112,7 +113,7 @@ export default function ContactForm() {
           }}
         />
 
-        <div className="relative text-center mb-14">
+        <ScrollReveal className="relative text-center mb-14">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
             {contactSection.label}
           </p>
@@ -122,11 +123,11 @@ export default function ContactForm() {
           <p className="text-muted mt-7 max-w-xl mx-auto text-base leading-relaxed">
             {contactSection.description}
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="relative grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
           {/* Form */}
-          <div className="lg:col-span-3 form-glow rounded-2xl">
+          <div className="lg:col-span-3 form-glow rounded-2xl circuit-corner-tl circuit-corner-br relative">
             {submitted ? (
               <div className="flex flex-col items-center justify-center gap-4 py-16 text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary">
